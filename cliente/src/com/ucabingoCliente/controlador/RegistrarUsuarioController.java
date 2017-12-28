@@ -4,6 +4,9 @@ import com.ucabingoCliente.vista.RegistrarUsuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Properties;
+
+import javax.swing.JFrame;
+
 import java.io.IOException;
 
 /*Recordatorio; se debe agregar ActionListener para que los botones se entiendan
@@ -49,7 +52,9 @@ public class RegistrarUsuarioController implements ActionListener {
 			}
 		}
 		if (this.ventana.botonCancelar == accion.getSource()) {
+			System.out.printf("Voy por aqui!\n");
 			this.ventana.frame.setVisible(false);
+			this.ventana.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		}
 	}
 
