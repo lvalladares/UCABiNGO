@@ -1,5 +1,6 @@
 package com.ucabingoCliente.vista;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,6 +14,7 @@ public class InicioSesion {
 	public JFrame frame;
 	public JTextField nombreUsuario;
 	public JPasswordField passUsuario;
+	public JPasswordField passUsuario2;
 	public JButton botonGuardar;
 	public JButton botonCancelar;
 	private JLabel labelUsuario;
@@ -54,6 +56,13 @@ public class InicioSesion {
 		labelUsuario.setBounds(20, 20, 200, 25);
 		frame.getContentPane().add(labelUsuario);
 		
+		JLabel labelFlag1 = new JLabel("*");
+		labelFlag1.setBounds(215, 20, 10, 10);
+		labelFlag1.setForeground(Color.red);
+		frame.getContentPane().add(labelFlag1);
+		/*Antonio-Recordatorio: se usa el foreground para cambiar el color,
+		  usando la variable predeterminada color.*/
+		
 		nombreUsuario = new JTextField();
 		nombreUsuario.setBounds(225, 20, 200, 25);
 		frame.getContentPane().add(nombreUsuario);
@@ -61,6 +70,11 @@ public class InicioSesion {
 		JLabel labelPass = new JLabel("Ingrese Contraseña");
 		labelPass.setBounds(35, 60, 200, 25);
 		frame.getContentPane().add(labelPass);
+		
+		JLabel labelFlag2 = new JLabel("*");
+		labelFlag2.setBounds(215, 60, 10, 10);
+		labelFlag2.setForeground(Color.red);
+		frame.getContentPane().add(labelFlag2);
 		
 		passUsuario = new JPasswordField();
 		passUsuario.setBounds(225, 60, 200, 25);
@@ -70,7 +84,12 @@ public class InicioSesion {
 		labelRepetirPass.setBounds(35, 100, 200, 25);
 		frame.getContentPane().add(labelRepetirPass);
 		
-		JPasswordField passUsuario2 = new JPasswordField();
+		JLabel labelFlag3 = new JLabel("*");
+		labelFlag3.setBounds(215, 100, 10, 10);
+		labelFlag3.setForeground(Color.red);
+		frame.getContentPane().add(labelFlag3);
+		
+		passUsuario2 = new JPasswordField();
 		passUsuario2.setBounds(225, 100, 200, 25);
 		frame.getContentPane().add(passUsuario2);
 		
