@@ -1,6 +1,6 @@
 package com.ucabingoCliente.controlador;
 
-import com.ucabingoCliente.vista.InicioSesion;
+import com.ucabingoCliente.vista.RegistrarUsuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Properties;
@@ -8,11 +8,11 @@ import java.io.IOException;
 
 /*Recordatorio; se debe agregar ActionListener para que los botones se entiendan
 como escuchadores.*/
-public class InicioSesionController implements ActionListener {
+public class RegistrarUsuarioController implements ActionListener {
 	
-	private InicioSesion ventana;
+	private RegistrarUsuario ventana;
 
-	public InicioSesionController(InicioSesion ventana) {
+	public RegistrarUsuarioController(RegistrarUsuario ventana) {
 		// TODO Auto-generated constructor stub
 		this.ventana = ventana;
 		this.ventana.frame.setVisible(true); 

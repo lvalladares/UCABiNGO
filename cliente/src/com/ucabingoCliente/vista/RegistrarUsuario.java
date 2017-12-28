@@ -9,7 +9,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
-public class InicioSesion {
+public class RegistrarUsuario {
 
 	public JFrame frame;
 	public JTextField nombreUsuario;
@@ -26,7 +26,7 @@ public class InicioSesion {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					InicioSesion window = new InicioSesion();
+					RegistrarUsuario window = new RegistrarUsuario();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,7 +38,7 @@ public class InicioSesion {
 	/**
 	 * Create the application.
 	 */
-	public InicioSesion() {
+	public RegistrarUsuario() {
 		initialize();
 	}
 

@@ -1,9 +1,9 @@
 package com.ucabingoCliente.main;
 
 import com.ucabingoCliente.controlador.CompraCartonController;
-import com.ucabingoCliente.controlador.InicioSesionController;
+import com.ucabingoCliente.controlador.RegistrarUsuarioController;
 import com.ucabingoCliente.vista.CompraCarton;
-import com.ucabingoCliente.vista.InicioSesion;
+import com.ucabingoCliente.vista.RegistrarUsuario;
 
 public class Main {
 
@@ -11,8 +11,8 @@ public class Main {
 		// pruebas
 		//CompraCarton vista = new CompraCarton();
 		//CompraCartonController controlador = new CompraCartonController(vista);
-		InicioSesion inicio = new InicioSesion();
-		InicioSesionController controladorInicioSesion = new InicioSesionController(inicio);
+		RegistrarUsuario registrar = new RegistrarUsuario();
+		RegistrarUsuarioController controladorRegistrarUsuario = new RegistrarUsuarioController(registrar);
 	}
 
 }
