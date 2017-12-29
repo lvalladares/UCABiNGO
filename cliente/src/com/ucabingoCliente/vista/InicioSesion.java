@@ -4,11 +4,15 @@ import java.awt.EventQueue;
 import com.ucabingoCliente.controlador.InicioSesionController;
 import javax.swing.JFrame;
 import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
 import javax.swing.JLabel;
 
 public class InicioSesion {
 	public JFrame frame;
-	public JButton cancelarBoton;
+	public JTextField usuarioTxt;
+	public JPasswordField passTxt;
+	public JButton salirBoton;
 	public JButton ingresarBoton;
 	
 	public static void main(String[] args) {
@@ -33,20 +37,36 @@ public class InicioSesion {
 		frame = new JFrame();
 		frame.setVisible(true);
 		frame.setTitle("Ingresar Usuario");
-		frame.setBounds(200, 200, 300, 300);
+		frame.setBounds(200, 200, 350, 300);
 		frame.getContentPane().setLayout(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JLabel usuario = new JLabel("Indicar el usuario");
-		usuario.setBounds(30, 60, 150, 25);
+		JLabel bienvenida = new JLabel("Ingrese los datos");
+		bienvenida.setBounds(100, 20, 200, 25);
+		frame.getContentPane().add(bienvenida);
+		
+		JLabel usuario = new JLabel("Usuario");
+		usuario.setBounds(35, 60, 200, 25);
 		frame.getContentPane().add(usuario);
+		
+		usuarioTxt = new JTextField();
+		usuarioTxt.setBounds(125, 60, 200, 25);
+		frame.getContentPane().add(usuarioTxt);
+		
+		JLabel password = new JLabel("Contraseña");
+		password.setBounds(15, 125, 140, 25);
+		frame.getContentPane().add(password);
+		
+		passTxt = new JPasswordField();
+		passTxt.setBounds(125, 125, 200, 25);
+		frame.getContentPane().add(passTxt);
 		
 		ingresarBoton = new JButton("Ingresar");
 		ingresarBoton.setBounds(50, 200, 100, 25);
 		frame.getContentPane().add(ingresarBoton);
 		
-		cancelarBoton = new JButton("Cancelar");
-		cancelarBoton.setBounds(160, 200, 100, 25);
-		frame.getContentPane().add(cancelarBoton);
+		salirBoton = new JButton("Salir");
+		salirBoton.setBounds(200, 200, 100, 25);
+		frame.getContentPane().add(salirBoton);
 	}
 }

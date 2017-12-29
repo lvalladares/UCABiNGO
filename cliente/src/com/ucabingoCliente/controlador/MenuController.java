@@ -2,6 +2,7 @@ package com.ucabingoCliente.controlador;
 
 import com.ucabingoCliente.vista.Menu;
 import com.ucabingoCliente.vista.RegistrarUsuario;
+import com.ucabingoCliente.vista.CompraCarton;
 import com.ucabingoCliente.vista.InicioSesion;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -25,17 +26,18 @@ public class MenuController implements ActionListener{
 	public void actionPerformed(ActionEvent accion) {
 		// TODO Auto-generated method stub
 		if(this.ventana.registrarUsuario == accion.getSource()) {
-			System.out.print("Voy a ingresar al sistema\n");
 			RegistrarUsuario ventanaRegistrar = new RegistrarUsuario();
 			RegistrarUsuarioController controladorRegistrar = new RegistrarUsuarioController(ventanaRegistrar);
 			this.ventana.frame.dispose();
 		}
 		if (this.ventana.comprarCarton == accion.getSource()) {
-			InicioSesion ventanaNueva = new InicioSesion();
-			InicioSesionController controladorNuevo = new InicioSesionController(ventanaNueva);
+			CompraCarton ventanaNueva = new CompraCarton();
+			CompraCartonController controladorNuevo = new CompraCartonController(ventanaNueva);
 			this.ventana.frame.dispose();
 		}
 		if (this.ventana.cerrar == accion.getSource()) {
+			InicioSesion ventanaInicio = new InicioSesion();
+			InicioSesionController inicioController = new InicioSesionController(ventanaInicio);
 			this.ventana.frame.dispose();
 		}
 	}

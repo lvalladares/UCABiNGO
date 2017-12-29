@@ -16,6 +16,8 @@ public class RegistrarUsuario {
 	public JPasswordField passUsuario2;
 	public JButton botonGuardar;
 	public JButton botonCancelar;
+	public JTextField telefonoUsuario;
+	public JTextField saldoUsuario;
 	private JLabel labelUsuario;
 
 	/**
@@ -55,13 +57,6 @@ public class RegistrarUsuario {
 		labelUsuario.setBounds(20, 20, 200, 25);
 		frame.getContentPane().add(labelUsuario);
 		
-		JLabel labelFlag1 = new JLabel("*");
-		labelFlag1.setBounds(215, 20, 10, 10);
-		labelFlag1.setForeground(Color.red);
-		frame.getContentPane().add(labelFlag1);
-		/*Antonio-Recordatorio: se usa el foreground para cambiar el color,
-		  usando la variable predeterminada color.*/
-		
 		nombreUsuario = new JTextField();
 		nombreUsuario.setBounds(225, 20, 200, 25);
 		frame.getContentPane().add(nombreUsuario);
@@ -69,11 +64,6 @@ public class RegistrarUsuario {
 		JLabel labelPass = new JLabel("Ingrese Contraseña");
 		labelPass.setBounds(35, 60, 200, 25);
 		frame.getContentPane().add(labelPass);
-		
-		JLabel labelFlag2 = new JLabel("*");
-		labelFlag2.setBounds(215, 60, 10, 10);
-		labelFlag2.setForeground(Color.red);
-		frame.getContentPane().add(labelFlag2);
 		
 		passUsuario = new JPasswordField();
 		passUsuario.setBounds(225, 60, 200, 25);
@@ -83,14 +73,25 @@ public class RegistrarUsuario {
 		labelRepetirPass.setBounds(35, 100, 200, 25);
 		frame.getContentPane().add(labelRepetirPass);
 		
-		JLabel labelFlag3 = new JLabel("*");
-		labelFlag3.setBounds(215, 100, 10, 10);
-		labelFlag3.setForeground(Color.red);
-		frame.getContentPane().add(labelFlag3);
-		
 		passUsuario2 = new JPasswordField();
 		passUsuario2.setBounds(225, 100, 200, 25);
 		frame.getContentPane().add(passUsuario2);
+		
+		JLabel labelTelf = new JLabel("Número de teléfono");
+		labelTelf.setBounds(35, 140, 200, 25);
+		frame.getContentPane().add(labelTelf);
+		
+		telefonoUsuario = new JTextField();
+		telefonoUsuario.setBounds(225, 140, 200, 25);
+		frame.getContentPane().add(telefonoUsuario);
+		
+		JLabel labelSaldo = new JLabel("Saldo a ingresar");
+		labelSaldo.setBounds(35, 180, 200, 25);
+		frame.getContentPane().add(labelSaldo);
+		
+		saldoUsuario = new JTextField();
+		saldoUsuario.setBounds(225, 180, 200, 25);
+		frame.getContentPane().add(saldoUsuario);
 		
 		botonGuardar = new JButton("Guardar");
 		botonGuardar.setBounds(50,225,100,40);

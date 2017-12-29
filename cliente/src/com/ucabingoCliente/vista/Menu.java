@@ -38,20 +38,20 @@ public class Menu {
 		frame.getContentPane().setLayout(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JLabel bienvenida = new JLabel("Bienvenido a UCABiNGO");
+		JLabel bienvenida = new JLabel("Bienvenid@ a UCABiNGO");
 		bienvenida.setBounds(60, 20, 250, 50);
 		frame.getContentPane().add(bienvenida);
 		
 		registrarUsuario = new JButton("Registrar Usuario");
-		registrarUsuario.setBounds(60, 80, 180, 25);
+		registrarUsuario.setBounds(40, 80, 220, 25);
 		frame.getContentPane().add(registrarUsuario);
 		
-		comprarCarton = new JButton("Comprar Cartón");
-		comprarCarton.setBounds(60, 120, 180, 25);
+		comprarCarton = new JButton("Comprar Cartón y Jugar");
+		comprarCarton.setBounds(40, 120, 220, 25);
 		frame.getContentPane().add(comprarCarton);
 		
 		cerrar = new JButton("Cerrar");
-		cerrar.setBounds(60,160,180,25);
+		cerrar.setBounds(40,160,220,25);
 		frame.getContentPane().add(cerrar);
 	}
 

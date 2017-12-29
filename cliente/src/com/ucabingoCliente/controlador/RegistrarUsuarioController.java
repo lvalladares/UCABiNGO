@@ -5,6 +5,7 @@ import com.ucabingoCliente.vista.RegistrarUsuario;
 import com.ucabingoCliente.controlador.MenuController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import java.util.Properties;
 
 import javax.swing.JFrame;
@@ -47,10 +48,25 @@ public class RegistrarUsuarioController implements ActionListener {
 		}
 	}
 	
+	public boolean revision(String nombreR, String telfR, String saldoR) {
+		if((nombreR.equals(""))||(telfR.equals(""))||(saldoR.equals(""))) {
+			return false;
+		}
+		return true;
+	}
+	
 	public void actionPerformed(ActionEvent accion) {
 		if (this.ventana.botonGuardar == accion.getSource()) {
-			if (!(this.ventana.nombreUsuario.getText().equals(""))&&(verificarPassword(this.ventana.passUsuario.getPassword(),this.ventana.passUsuario2.getPassword()))) {
-				System.out.printf(" Se guardó de manera correcta");
+			boolean datosR = revision(this.ventana.nombreUsuario.getText(),this.ventana.telefonoUsuario.getText(),this.ventana.saldoUsuario.getText());
+			boolean passR = verificarPassword(this.ventana.passUsuario.getPassword(),this.ventana.passUsuario2.getPassword());
+			if ((datosR)&&(passR)) {
+				System.out.print("Campos completos\n");
+			}
+			if (!(datosR)){
+				JOptionPane.showMessageDialog(null, "Campo(s) vacio(s)");
+			}
+			if (!(passR)) {
+				JOptionPane.showMessageDialog(null, "Contraseñas no son iguales");
 			}
 		}
 		if (this.ventana.botonCancelar == accion.getSource()) {
