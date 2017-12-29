@@ -8,7 +8,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import com.ucabingoCliente.vista.CompraCarton;
-
+import com.ucabingoCliente.vista.Menu;
 import com.google.gson.*;
 
 public class CompraCartonController implements ActionListener, ChangeListener{
@@ -57,10 +57,11 @@ public class CompraCartonController implements ActionListener, ChangeListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		//Accion de boton regresar
-		/*if (this.vista.btnRegresar == e.getSource()) {
-			
+		if (this.vista.btnRegresar == e.getSource()) {
+			Menu window = new Menu();
+			MenuController controladorWindow = new MenuController(window);
 			this.vista.frame.dispose();
-		}*/
+		}
 				
 		//Accion de boton comprar
 		if (this.vista.btnComprar == e.getSource()) {
