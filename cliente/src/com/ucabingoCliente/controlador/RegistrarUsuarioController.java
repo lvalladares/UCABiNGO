@@ -1,6 +1,8 @@
 package com.ucabingoCliente.controlador;
 
+import com.ucabingoCliente.vista.Menu;
 import com.ucabingoCliente.vista.RegistrarUsuario;
+import com.ucabingoCliente.controlador.MenuController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Properties;
@@ -52,9 +54,9 @@ public class RegistrarUsuarioController implements ActionListener {
 			}
 		}
 		if (this.ventana.botonCancelar == accion.getSource()) {
-			System.out.printf("Voy por aqui!\n");
-			this.ventana.frame.setVisible(false);
-			this.ventana.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			Menu ventanaMenu = new Menu();
+			MenuController controladorMenu = new MenuController(ventanaMenu);
+			this.ventana.frame.dispose();
 		}
 	}
 

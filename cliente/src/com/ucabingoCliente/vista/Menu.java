@@ -7,7 +7,7 @@ import javax.swing.JButton;
 
 public class Menu {
 	public JFrame frame;
-	public JButton inicioSesion;
+	public JButton registrarUsuario;
 	public JButton comprarCarton;
 	public JButton cerrar;
 
@@ -42,16 +42,16 @@ public class Menu {
 		bienvenida.setBounds(60, 20, 250, 50);
 		frame.getContentPane().add(bienvenida);
 		
-		inicioSesion = new JButton("Iniciar Sesión");
-		inicioSesion.setBounds(80, 80, 150, 25);
-		frame.getContentPane().add(inicioSesion);
+		registrarUsuario = new JButton("Registrar Usuario");
+		registrarUsuario.setBounds(60, 80, 180, 25);
+		frame.getContentPane().add(registrarUsuario);
 		
 		comprarCarton = new JButton("Comprar Cartón");
-		comprarCarton.setBounds(80, 120, 150, 25);
+		comprarCarton.setBounds(60, 120, 180, 25);
 		frame.getContentPane().add(comprarCarton);
 		
 		cerrar = new JButton("Cerrar");
-		cerrar.setBounds(80,160,150,25);
+		cerrar.setBounds(60,160,180,25);
 		frame.getContentPane().add(cerrar);
 	}
 

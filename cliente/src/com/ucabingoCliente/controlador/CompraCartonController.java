@@ -74,6 +74,11 @@ public class CompraCartonController implements ActionListener, ChangeListener{
 		    final Properties json = gson.fromJson(datos, Properties.class);
 		    System.out.println(json);
 		}
+		if (this.vista.btnRegresar == e.getSource()) {
+			Menu ventanaNueva = new Menu();
+			MenuController controlador = new MenuController(ventanaNueva);
+			this.vista.frame.dispose();
+		}
 	}
 
 }

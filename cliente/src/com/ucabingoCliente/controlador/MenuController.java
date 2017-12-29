@@ -1,7 +1,8 @@
 package com.ucabingoCliente.controlador;
 
 import com.ucabingoCliente.vista.Menu;
-import com.ucabingoCliente.vista.CompraCarton;
+import com.ucabingoCliente.vista.RegistrarUsuario;
+import com.ucabingoCliente.vista.InicioSesion;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,24 +17,25 @@ public class MenuController implements ActionListener{
 		this.ventana = ventana;
 		this.ventana.frame.setVisible(true);
 		//Recordatorio: se debe agregar el actionListener para que funcione los botones.
-		this.ventana.inicioSesion.addActionListener(this);
+		this.ventana.registrarUsuario.addActionListener(this);
 		this.ventana.comprarCarton.addActionListener(this);
 		this.ventana.cerrar.addActionListener(this);
 	}
 
 	public void actionPerformed(ActionEvent accion) {
 		// TODO Auto-generated method stub
-		if(this.ventana.inicioSesion == accion.getSource()) {
+		if(this.ventana.registrarUsuario == accion.getSource()) {
 			System.out.print("Voy a ingresar al sistema\n");
+			RegistrarUsuario ventanaRegistrar = new RegistrarUsuario();
+			RegistrarUsuarioController controladorRegistrar = new RegistrarUsuarioController(ventanaRegistrar);
+			this.ventana.frame.dispose();
 		}
 		if (this.ventana.comprarCarton == accion.getSource()) {
-			CompraCarton ventanaNueva = new CompraCarton();
-			CompraCartonController controladorNuevo = new CompraCartonController(ventanaNueva);
+			InicioSesion ventanaNueva = new InicioSesion();
+			InicioSesionController controladorNuevo = new InicioSesionController(ventanaNueva);
 			this.ventana.frame.dispose();
-			
 		}
 		if (this.ventana.cerrar == accion.getSource()) {
-			this.ventana.frame.setVisible(false);
 			this.ventana.frame.dispose();
 		}
 	}
