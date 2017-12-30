@@ -9,6 +9,7 @@ import javax.swing.event.ChangeListener;
 
 import com.ucabingoCliente.vista.CompraCarton;
 import com.ucabingoCliente.vista.Menu;
+import com.ucabingoCliente.vista.PanelJuego;
 import com.google.gson.*;
 
 public class CompraCartonController implements ActionListener, ChangeListener{
@@ -73,6 +74,10 @@ public class CompraCartonController implements ActionListener, ChangeListener{
 			final Gson gson = new Gson();
 		    final Properties json = gson.fromJson(datos, Properties.class);
 		    System.out.println(json);
+		    
+		    PanelJuego vista = new PanelJuego();
+		    PanelJuegoController bingo = new PanelJuegoController(vista, Integer.parseInt(this.vista.spinner.getValue().toString()));
+		    this.vista.frame.dispose();
 		}
 	}
 

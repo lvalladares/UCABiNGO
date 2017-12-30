@@ -6,14 +6,21 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
+import com.ucabingoCliente.vista.PanelJuego;
+
 public class Celda extends JButton implements ActionListener{
 	
 	public int valor;
 	public boolean estado;
+	public String letra;
+
+	public PanelJuego vista = new PanelJuego();
 
 	public Celda(int pos_x, int pos_y, int ancho, int alto) {
 		super();
         setBounds(pos_x, pos_y, ancho, alto);
+        valor = 0;
+        estado = false;
         addActionListener( this );
 	}
 
@@ -22,10 +29,24 @@ public class Celda extends JButton implements ActionListener{
 	}
 	
 	public void actionPerformed( ActionEvent e ){
-        setBackground(Color.BLUE);
-        setForeground(Color.WHITE);
-        this.estado = true;
+		if (validaSeleccion() == true) {
+			vista.lblNoSePuede.setVisible(false);
+			setBackground(Color.BLUE);
+	        setForeground(Color.WHITE);
+	        this.setEstado(true);
+		}
     }
+	
+	public boolean validaSeleccion() {
+		String seleccion = letra + valor;
+		
+		if (seleccion.equalsIgnoreCase(this.vista.lblNumero.getText())) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 	
 	public int getValor() {
 		return valor;
@@ -36,12 +57,20 @@ public class Celda extends JButton implements ActionListener{
 		this.valor = valor;
 	}
 
-	public boolean isEstado() {
+	public boolean getEstado() {
 		return estado;
 	}
 
 	public void setEstado(boolean estado) {
 		this.estado = estado;
+	}
+	
+	public String getLetra() {
+		return letra;
+	}
+
+	public void setLetra(String letra) {
+		this.letra = letra;
 	}
 
 }

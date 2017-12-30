@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import java.awt.FlowLayout;
 import java.awt.LayoutManager;
 import javax.swing.SwingConstants;
+import java.awt.Color;
 
 public class PanelJuego {
 
@@ -24,6 +25,10 @@ public class PanelJuego {
 	public JPanel panel2;
 	public JPanel panel3;
 	public JPanel panel4;
+	
+	public JLabel lblNumero;
+	public JLabel lblColumna;
+	public JLabel lblNoSePuede;
 	
 	public JLabel lblB1;
 	public JLabel lblB2;
@@ -64,20 +69,20 @@ public class PanelJuego {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblFormaDeJuego = new JLabel("Forma de juego:");
-		lblFormaDeJuego.setBounds(224, 12, 120, 15);
+		lblFormaDeJuego.setBounds(183, 12, 120, 15);
 		frame.getContentPane().add(lblFormaDeJuego);
 		
-		JLabel lblColumna = new JLabel("Columna");
-		lblColumna.setBounds(346, 12, 70, 15);
+		lblColumna = new JLabel("Columna");
+		lblColumna.setBounds(309, 12, 70, 15);
 		frame.getContentPane().add(lblColumna);
 		
 		JLabel lblNumeroJugado = new JLabel("Numero jugado:");
-		lblNumeroJugado.setBounds(224, 39, 125, 15);
+		lblNumeroJugado.setBounds(183, 27, 125, 15);
 		frame.getContentPane().add(lblNumeroJugado);
 		
-		JLabel lblB_1 = new JLabel("B12");
-		lblB_1.setBounds(346, 39, 70, 15);
-		frame.getContentPane().add(lblB_1);
+		lblNumero = new JLabel("B12");
+		lblNumero.setBounds(309, 27, 70, 15);
+		frame.getContentPane().add(lblNumero);
 		
 		JLabel lblFelicidades = new JLabel("Felicidades! Ha ganado la partida!");
 		lblFelicidades.setBounds(172, 572, 244, 15);
@@ -177,6 +182,13 @@ public class PanelJuego {
 		lblO4 = new JLabel("O");
 		lblO4.setBounds(550, 335, 15, 15);
 		frame.getContentPane().add(lblO4);
+		
+		lblNoSePuede = new JLabel("No se puede realizar esa seleccion");
+		lblNoSePuede.setForeground(Color.RED);
+		lblNoSePuede.setBackground(Color.RED);
+		lblNoSePuede.setBounds(172, 53, 262, 15);
+		frame.getContentPane().add(lblNoSePuede);
+		lblNoSePuede.setVisible(false);
 		
 	}
 }

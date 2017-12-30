@@ -1,5 +1,8 @@
 package com.ucabingoCliente.controlador;
 
+import javax.swing.JLabel;
+
+import com.ucabingoCliente.modelo.Celda;
 import com.ucabingoCliente.modelo.Matriz;
 import com.ucabingoCliente.vista.PanelJuego;
 
@@ -13,7 +16,7 @@ public class PanelJuegoController {
 		
 		mostrarCarton(cantidadCartones);
 	}
-	
+
 	private void mostrarCarton(int cantidadCartones) {
 		
 		//estos arreglos son para las pruebas		
@@ -104,8 +107,6 @@ public class PanelJuegoController {
 		else if (cantidadCartones == 4) {
 			Matriz matriz = new Matriz();
 	        matriz.LlenarMariz(arreglo1, this.vista.panel1, this.vista.panel2, this.vista.panel3, this.vista.panel4);
-	        
-	        System.out.println(matriz.getMatriz()[1][1].getValor());
 		}
 		
 	}

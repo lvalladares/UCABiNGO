@@ -14,6 +14,7 @@ public class InicioSesionController implements ActionListener {
 		public InicioSesionController(InicioSesion ventana) {
 			this.ventana = ventana;
 			this.ventana.frame.setVisible(true);
+			
 			this.ventana.ingresarBoton.addActionListener(this);
 			this.ventana.salirBoton.addActionListener(this);
 		}
