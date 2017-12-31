@@ -5,6 +5,7 @@ import com.ucabingoCliente.vista.Menu;
 import javax.swing.JOptionPane;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import com.google.gson.*;
 import java.util.Properties;
 
 public class InicioSesionController implements ActionListener {
@@ -35,6 +36,13 @@ public class InicioSesionController implements ActionListener {
 		public void actionPerformed(ActionEvent accion) {
 			if(this.ventana.ingresarBoton == accion.getSource()) {
 				if (verificarCampos(this.ventana.usuarioTxt.getText(),this.ventana.passTxt.getPassword())) {
+					char[] salto = this.ventana.passTxt.getPassword();
+					String senal = new String(salto);
+					String info = "{'usuario':"+this.ventana.usuarioTxt.getText()+"',"
+									+"'contraseña':"+senal+"}";
+					final Gson transferir = new Gson();
+					final Properties enviar = transferir.fromJson(info,Properties.class);
+					System.out.println(enviar);
 					Menu ventanaMenu = new Menu();
 					MenuController controladorMenu = new MenuController(ventanaMenu);
 					this.ventana.frame.dispose();

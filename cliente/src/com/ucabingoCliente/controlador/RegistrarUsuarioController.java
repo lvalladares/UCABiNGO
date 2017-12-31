@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import java.util.Properties;
+import com.google.gson.*;
 
 import javax.swing.JFrame;
 
@@ -48,7 +49,7 @@ public class RegistrarUsuarioController implements ActionListener {
 		}
 	}
 	
-	public boolean revision(String nombreR, String telfR, String saldoR) {
+	private boolean revision(String nombreR, String telfR, String saldoR) {
 		if((nombreR.equals(""))||(telfR.equals(""))||(saldoR.equals(""))) {
 			return false;
 		}
@@ -61,6 +62,15 @@ public class RegistrarUsuarioController implements ActionListener {
 			boolean passR = verificarPassword(this.ventana.passUsuario.getPassword(),this.ventana.passUsuario2.getPassword());
 			if ((datosR)&&(passR)) {
 				System.out.print("Campos completos\n");
+				char[] cs= this.ventana.passUsuario.getPassword();
+				String infoPass = new String(cs);
+				String info = "{'Usuario':"+this.ventana.nombreUsuario.getText()+"',"
+						+"'Contraseña':"+infoPass+"',"
+						+"'Telefono':"+this.ventana.telefonoUsuario.getText()+"',"
+						+"'Saldo':"+this.ventana.saldoUsuario.getText()+"}";
+				final Gson file = new Gson();
+				final Properties transferencia = file.fromJson(info, Properties.class);
+				System.out.println(transferencia);
 			}
 			if (!(datosR)){
 				JOptionPane.showMessageDialog(null, "Campo(s) vacio(s)");
