@@ -2,7 +2,6 @@ package com.ucabingoCliente.controlador;
 
 import javax.swing.JLabel;
 
-import com.ucabingoCliente.modelo.Celda;
 import com.ucabingoCliente.modelo.Matriz;
 import com.ucabingoCliente.vista.PanelJuego;
 

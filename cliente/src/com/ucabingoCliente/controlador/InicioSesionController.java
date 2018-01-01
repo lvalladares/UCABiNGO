@@ -35,6 +35,7 @@ public class InicioSesionController implements ActionListener {
 		
 		public void actionPerformed(ActionEvent accion) {
 			if(this.ventana.ingresarBoton == accion.getSource()) {
+<<<<<<< Updated upstream
 				if (verificarCampos(this.ventana.usuarioTxt.getText(),this.ventana.passTxt.getPassword())) {
 					char[] salto = this.ventana.passTxt.getPassword();
 					String senal = new String(salto);
@@ -43,6 +44,9 @@ public class InicioSesionController implements ActionListener {
 					final Gson transferir = new Gson();
 					final Properties enviar = transferir.fromJson(info,Properties.class);
 					System.out.println(enviar);
+=======
+				if (1==1/*verificarCampos(this.ventana.usuarioTxt.getText(),this.ventana.passTxt.getPassword())*/) {
+>>>>>>> Stashed changes
 					Menu ventanaMenu = new Menu();
 					MenuController controladorMenu = new MenuController(ventanaMenu);
 					this.ventana.frame.dispose();

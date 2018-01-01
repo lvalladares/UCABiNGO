@@ -27,10 +27,9 @@ public class Celda extends JButton implements ActionListener{
 	public Celda() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public void actionPerformed( ActionEvent e ){
 		if (validaSeleccion() == true) {
-			vista.lblNoSePuede.setVisible(false);
 			setBackground(Color.BLUE);
 	        setForeground(Color.WHITE);
 	        this.setEstado(true);
