@@ -71,5 +71,7 @@ public class InicioSesion {
 		salirBoton = new JButton("Salir");
 		salirBoton.setBounds(200, 200, 100, 25);
 		frame.getContentPane().add(salirBoton);
+		
+		frame.repaint();
 	}
 }
