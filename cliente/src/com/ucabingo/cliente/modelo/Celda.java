@@ -36,6 +36,15 @@ public class Celda extends JButton implements ActionListener{
 		}
     }
 	
+	public void pintarCelda() {
+		if (validaSeleccion() == true) {
+			setBackground(Color.BLUE);
+	        setForeground(Color.WHITE);
+	        this.setEstado(true);
+	        this.repaint();
+		}
+	}
+	
 	public boolean validaSeleccion() {
 		String seleccion = letra + valor;
 		
