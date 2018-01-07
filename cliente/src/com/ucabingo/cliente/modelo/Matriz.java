@@ -25,7 +25,7 @@ public class Matriz {
 		this.matriz = matriz;
 	}
 	
-	public void marcarBoton(PanelJuego vista) {
+	public void marcarBoton(PanelJuego vista) {		
 		this.vista = vista;
 		String string = this.vista.lblNumero.getText();
 		String[] parts = string.split("");

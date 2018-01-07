@@ -76,6 +76,7 @@ public class PanelJuegoController {
 	        this.vista.lblN4.setVisible(false);
 	        this.vista.lblG4.setVisible(false);
 	        this.vista.lblO4.setVisible(false);
+	        
 		}
 		else if (cantidadCartones == 2) {
 			Matriz matriz = new Matriz();
@@ -92,6 +93,7 @@ public class PanelJuegoController {
 	        this.vista.lblN4.setVisible(false);
 	        this.vista.lblG4.setVisible(false);
 	        this.vista.lblO4.setVisible(false);
+	        
 		}
 		else if (cantidadCartones == 3) {
 			Matriz matriz = new Matriz();
@@ -102,10 +104,12 @@ public class PanelJuegoController {
 	        this.vista.lblN4.setVisible(false);
 	        this.vista.lblG4.setVisible(false);
 	        this.vista.lblO4.setVisible(false);
+	        
 		}
 		else if (cantidadCartones == 4) {
 			Matriz matriz = new Matriz();
 	        matriz.LlenarMariz(arreglo1, this.vista.panel1, this.vista.panel2, this.vista.panel3, this.vista.panel4, this.vista);
+	        
 		}
 		
 	}
